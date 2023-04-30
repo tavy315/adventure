@@ -2,8 +2,16 @@
 framework:
     secret: '%env(APP_SECRET)%'
     #csrf_protection: true
+    form:
+        csrf_protection:
+            enabled: false
     http_method_override: false
     handle_all_throwables: true
+    http_client:
+        scoped_clients:
+            galactus.client:
+                base_uri: '%env(GALACTUS_URL)%'
+                auth_basic: '%env(GALACTUS_USERNAME)%:%env(GALACTUS_PASSWORD)%'
 
     # Enables session support. Note that the session will ONLY be started if you read or write from it.
     # Remove or comment this section to explicitly disable session support.

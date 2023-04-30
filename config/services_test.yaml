@@ -1,0 +1,9 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    App\Tests\Mock\AbstractApiMock:
+        decorates: 'galactus.client'
+        decoration_inner_name: 'App\Tests\Mock\AbstractApiMock.galactus.client'
+        arguments: [ '@.inner' ]
