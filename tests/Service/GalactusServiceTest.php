@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Tests;
+namespace App\Tests\Service;
 
 use App\Service\GalactusService;
 use PHPUnit\Framework\TestCase;
@@ -10,7 +10,7 @@ use Symfony\Component\HttpClient\MockHttpClient;
 use Symfony\Component\HttpClient\Response\MockResponse;
 use Symfony\Contracts\HttpClient\ResponseInterface;
 
-class CreateUserTest extends TestCase
+class GalactusServiceTest extends TestCase
 {
     private const KID = 'mocked kid';
     private const EMAIL = 'test@email.com';

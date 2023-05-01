@@ -2,9 +2,9 @@
 framework:
     secret: '%env(APP_SECRET)%'
     #csrf_protection: true
-    form:
-        csrf_protection:
-            enabled: false
+#    form:
+#        csrf_protection:
+#            enabled: false
     http_method_override: false
     handle_all_throwables: true
     http_client:
